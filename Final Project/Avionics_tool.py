@@ -22,6 +22,7 @@ from tkinter import messagebox
 import matplotlib.animation as anim
 from PIL import ImageTk, Image
 
+#save data function
 def save():
     
     def save_data():
@@ -55,7 +56,7 @@ def save():
     
 
 
-
+#Data comparison function
 def Data_Comparison():
     class MyClass:
         def __init__(self, frame):
@@ -211,7 +212,7 @@ def Data_Comparison():
         MyClass(MyFrame)
         MyFrame.pack()
         root6.mainloop() 
-    
+#Function to implement Gyroscope Filtering    
 def Filters1():
     class MyClass:
         def __init__(self, frame):
@@ -402,7 +403,7 @@ def Filters1():
         MyFrame.pack()
         root5.mainloop()
 
-
+#Function to implement animated Plot 
 def animate():
     plt.figure(1)
     ax=plt.axes(xlim=(0,max(t)),ylim=(min(Rx),max(Rx)))
@@ -464,6 +465,7 @@ def animate():
                              blit=True)
     animation2=anim.FuncAnimation(plt.figure(3),animate2,init_func=init2,frames=len(Rz),interval=1,
                              blit=True)
+#Function to implement Complementary Filter
 def Complementary_Filter():
     class MyClass:
         def __init__(self, frame):
@@ -588,7 +590,7 @@ def Complementary_Filter():
         MyClass(MyFrame)
         MyFrame.pack()
         root4.mainloop() 
-    
+#Function to implement Accelerometer dat Filtering   
 def Filters():
     class MyClass:
         def __init__(self, frame):
@@ -787,7 +789,7 @@ def Filters():
         MyFrame.pack()
         root3.mainloop()
                                    
-    
+#Function that plot data against time    
 def Timeplot():
     class MyClass:
         def __init__(self, frame):
@@ -952,7 +954,7 @@ def Timeplot():
         MyFrame.pack()
         root1.mainloop() 
                       
-
+#Function that creates frquency domain plot
 def FFT():
     class MyClass:
         def __init__(self, frame):
@@ -1076,6 +1078,9 @@ def FFT():
         MyFrame.pack()
         root2.mainloop() 
 
+        
+        
+#Code to create main window and read text files
 class OptionsWindow(tk.Frame):
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
